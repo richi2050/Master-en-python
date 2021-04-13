@@ -33,7 +33,9 @@ def index(request):
         year += 1
     html += "</ul>"
 
-    return render(request,'index.html')
+    return render(request,'index.html',{
+        'title': 'inicio',
+        'mi_variable' : 'soy un dato que ets ane la vista'})
 
 def hola_mundo(request):
     return render(request,'hola_mundo.html')
