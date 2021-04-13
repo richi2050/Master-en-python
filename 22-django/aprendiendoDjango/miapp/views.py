@@ -13,6 +13,9 @@ layout ="""
         <li>
             <a href='/pagina-pruebas'>Pruebas</a>
         </li>
+        <li>
+            <a href='/contacto'>Contacto</a>
+        </li>
     </ul>
     <hr/>
 """
@@ -38,4 +41,9 @@ def hola_mundo(request):
 def pagina(request):
     return HttpResponse(layout+"""
     <h1>pagina d emi web</h1>
+    """)
+
+def contacto(request,nombre='nombre'):
+    return HttpResponse(layout+f"""
+    <h2>Contacto {nombre}</h2>
     """)
