@@ -74,7 +74,6 @@ nav ul li a:hover{
 .barra{
     width: 1250px;
     margin: 0 auto;
-    margin-bottom: 140px;
 }
 
 .esquina-izquierda{
@@ -95,4 +94,39 @@ nav ul li a:hover{
     background: #2B2F30;
     height: 10px;
     float: left;
+}
+
+#content{
+    width: 1212px;
+    min-height: 930px;
+    margin:0 auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.box{
+    background: white;
+    border-radius: 1px;
+    width: 95%;
+    min-height: 930px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin: 0 auto;
+}
+.title{
+    color: #444;
+    letter-spacing: 1px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+footer{
+    width: 1250px;
+    background-color: #1B1E1F;
+    border: 1px solid #333;
+    color:#d1d4d6;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0px 0px 20px gray;
 }
