@@ -34,6 +34,7 @@ def index(request):
     html += "</ul>"
     nombre = 'Ricardo Lugo'
     lenguajes = ['java', 'javascript', 'php', 'C']
+    
 
     return render(request,'index.html',{
         'nombre': nombre,
