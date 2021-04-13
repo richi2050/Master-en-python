@@ -22,25 +22,19 @@ layout ="""
 
 # Create your views here.
 def index(request):
-    html = """
-        <h1>Inicio</h1>
-        <p>Año hasta el 2050:</p>
-        <ul>
-    """
-    year = 2021
-    while year <= 2050:
-        html += f"<li>{str(year)}</li>"
-        year += 1
-    html += "</ul>"
+    
     nombre = 'Ricardo Lugo'
     lenguajes = ['java', 'javascript', 'php', 'C']
+    year = 2021
+    hasta = range(year, 2051)
     
 
     return render(request,'index.html',{
         'nombre': nombre,
         'title': 'inicio',
         'mi_variable' : 'soy un dato que ets ane la vista',
-        'lenguajes' : lenguajes})
+        'lenguajes' : lenguajes,
+        'years': hasta})
 
 def hola_mundo(request):
     return render(request,'hola_mundo.html')
