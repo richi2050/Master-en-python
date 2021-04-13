@@ -32,8 +32,10 @@ def index(request):
         html += f"<li>{str(year)}</li>"
         year += 1
     html += "</ul>"
+    nombre = 'Ricardo Lugo'
 
     return render(request,'index.html',{
+        'nombre': nombre,
         'title': 'inicio',
         'mi_variable' : 'soy un dato que ets ane la vista'})
 

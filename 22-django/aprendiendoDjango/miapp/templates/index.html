@@ -3,8 +3,15 @@
 {% block content %}
 <h1 class='title '>{{title}}</h1>
 
+<p>{{mi_variable}}</p>
 
-{{mi_variable}}
+{% if nombre and nombre == 'Ricardo Lugo' %}
+    <p>{{nombre}}</p>
+{% else %}
+    <strong> El nombre no existe</strong>
+{% endif %}
+
+
 <p>Año hasta el 2050:</p>
 
 {% endblock %}
