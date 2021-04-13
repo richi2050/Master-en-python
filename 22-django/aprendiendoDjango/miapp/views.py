@@ -33,11 +33,13 @@ def index(request):
         year += 1
     html += "</ul>"
     nombre = 'Ricardo Lugo'
+    lenguajes = ['java', 'javascript', 'php', 'C']
 
     return render(request,'index.html',{
         'nombre': nombre,
         'title': 'inicio',
-        'mi_variable' : 'soy un dato que ets ane la vista'})
+        'mi_variable' : 'soy un dato que ets ane la vista',
+        'lenguajes' : lenguajes})
 
 def hola_mundo(request):
     return render(request,'hola_mundo.html')

@@ -10,6 +10,11 @@
 {% else %}
     <strong> El nombre no existe</strong>
 {% endif %}
+<ul>
+    {% for lenguaje in lenguajes %}
+        <li>{{lenguaje}}</li>
+    {% endfor %}
+</ul>
 
 
 <p>Año hasta el 2050:</p>
