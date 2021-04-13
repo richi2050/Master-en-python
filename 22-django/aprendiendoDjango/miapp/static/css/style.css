@@ -39,3 +39,35 @@ header{
     font-weight: normal;
     color: #2ba977;
 }
+
+nav{
+    width: 1250px;
+    height: 40px;
+    background-color: #1B1E1F;
+    border: 1px solid #333333;
+    margin: 0 auto;
+    box-shadow: 0px 22px 22px gray;
+    font-size: 13px;
+}
+
+nav ul{
+    list-style: none;
+    text-decoration: none;
+}
+nav ul li{
+    line-height: 40px;
+    float: left;
+}
+
+nav ul li a{
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+    color:white;
+}
+nav ul li a:hover{
+    background: #2ba977;
+    box-shadow: 0px 0px 5px black inset;
+    color: white;
+    transition: all 300ms;
+}
