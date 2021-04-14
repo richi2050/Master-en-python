@@ -24,16 +24,16 @@
     <nav>
         <ul>
             <li>
-                <a href='/inicio'>Inicio</a>
+                <a href='{% url 'inicio' %}'>Inicio</a>
             </li>
             <li>
-                <a href='/hola-mundo'>Hola Mundo</a>
+                <a href='{% url 'hola_mundo' %}'>Hola Mundo</a>
             </li>
             <li>
-                <a href='/pagina-pruebas'>Pruebas</a>
+                <a href='{% url 'pagina' %}'>Pruebas</a>
             </li>
             <li>
-                <a href='/contacto'>Contacto</a>
+                <a href='{% url 'contacto' 'Ricardo' %}'>Contacto</a>
             </li>
         </ul>
     </nav>
