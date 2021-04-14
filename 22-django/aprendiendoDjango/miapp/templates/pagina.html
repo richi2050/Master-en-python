@@ -2,4 +2,15 @@
 {% extends 'layout.html' %}
 {% block content %}
 <h1>pagina de mi web html</h1>
+<p>{{ "Creado por Ricardo Lugo"|cut:" " }}</p>
+<p>{{ texto|default:"vacio"}}</p>
+<p>{{ lista|first }}</p>
+<p>{{ lista|last }}</p>
+<p>{{ lista|join:', ' }}</p>
+<p>{{ lista|length}}</p>
+<p>{{ lista|random}}</p>
+<p>{{ "texto prueba"|length}}</p>
+<p>{{ "texto prueba"|upper}}</p>
+<p>{{ "texto prueba"|lower}}</p>
+<p>{{ "<h1>texto</h1> <strong>prueba</strong> hola <p>mundo</p>"|striptags|wordcount}}</p>
 {% endblock %}

@@ -42,8 +42,12 @@ def hola_mundo(request):
 def pagina(request, redirigir=0):
     if redirigir == 1:
         return redirect('/inicio/')
+        
 
-    return render(request,'pagina.html')
+    return render(request,'pagina.html',{
+        'texto' :'',
+        'lista' : [1,2,3,4,5]
+    })
 
 def contacto(request,nombre='nombre'):
     return HttpResponse(layout+f"""
