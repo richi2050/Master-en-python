@@ -30,5 +30,6 @@ urlpatterns = [
     path('crear-articulo/<str:title>/<str:content>/<str:public>',views.crear_articulo, name='crear_articulo' ),
     path('articulo/', views.articulo, name='articulo'),
     path('editar-articulo/<int:id>', views.edit_articulo, name='editar_articulo'),
-    path('articulos/', views.articulos, name='articulos')
+    path('articulos/', views.articulos, name='articulos'),
+    path('borrar-articulo/<int:id>/', views.borrar_articulo, name='borrar')
 ]
