@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse, redirect
 from miapp.models import Article
+from django.db.models import Q
 
 layout ="""
     <h1>Sitio Web Django</h1>
@@ -101,6 +102,11 @@ def articulos(request):
     articulos = Article.objects.filter(id__lte=2) #solo que busca menores he iguales que gt
     articulos = Article.objects.all().exclude(public=True)
     articulos = Article.objects.raw("SELECT * FROM miapp_article where public=True")
+
+    # OR en consultas con el ORM
+    articulos = Article.objects.filter(
+        Q(title__contains='1') | Q(title__contains='3') 
+    )
 
     return render(request, 'articulos.html', {
         'articulos': articulos
