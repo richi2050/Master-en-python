@@ -85,6 +85,11 @@ def edit_articulo(request, id):
 
 def articulos(request):
     articulos = Article.objects.all();
+    #articulos = Article.objects.order_by('-title'); #orderby ASC
+    #articulos = Article.objects.order_by('title'); #orderby DESC
+    articulos = Article.objects.order_by('title')[:2]; #que solo aparezca un elemento
+    articulos = Article.objects.order_by('title')[1:2]; #que solo aparezca un elemento de rango 1:2
+
     return render(request, 'articulos.html', {
         'articulos': articulos
     })
