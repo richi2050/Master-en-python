@@ -62,7 +62,7 @@ def crear_articulo(request, title, content, public):
         public = public
     )
     articulo.save()
-    return HttpResponse(f"Usuario creado: {articulo.title}")
+    return HttpResponse(f"Articulo creado: {articulo.title}")
 
 def articulo(request):
     articulo = Article.objects.get(id=3)
@@ -74,3 +74,17 @@ def articulo(request):
     except:
         response = "<h1>Articulo no encontrado </h1>"
     return HttpResponse(response)
+
+def edit_articulo(request, id):
+    articulo = Article.objects.get(pk=id)
+    articulo.title ='titulo modificado'
+    articulo.content='este es el contenido modificado'
+    articulo.public = True
+    articulo.save()
+    return HttpResponse(f"Articulo editado: {articulo.title}")
+
+def articulos(request):
+    articulos = Article.objects.all();
+    return render(request, 'articulos.html', {
+        'articulos': articulos
+    })

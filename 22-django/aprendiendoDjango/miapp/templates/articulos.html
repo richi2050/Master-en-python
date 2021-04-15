@@ -1,0 +1,11 @@
+
+{% extends 'layout.html' %}
+{% block content %}
+<h1>pagina de mi web Articulos</h1>
+<ul>
+    {% for articulo in  articulos %}
+        <li> {{ articulo.id }} . {{ articulo.title }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
