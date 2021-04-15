@@ -100,6 +100,7 @@ def articulos(request):
     articulos = Article.objects.filter(id__lt=2) #solo que busca menores que lt
     articulos = Article.objects.filter(id__lte=2) #solo que busca menores he iguales que gt
     articulos = Article.objects.all().exclude(public=True)
+    articulos = Article.objects.raw("SELECT * FROM miapp_article where public=True")
 
     return render(request, 'articulos.html', {
         'articulos': articulos
