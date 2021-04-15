@@ -89,6 +89,16 @@ def articulos(request):
     #articulos = Article.objects.order_by('title'); #orderby DESC
     #articulos = Article.objects.order_by('title')[:2]; #que solo aparezca un elemento
     #articulos = Article.objects.order_by('title')[1:2]; #que solo aparezca un elemento de rango 1:2
+    #---------------------------  filter y lookups  ----------------------------------
+    #articulos = Article.objects.filter(title='articloURL',id=5) where
+    #articulos = Article.objects.filter(title__contains='Primer') #like
+    articulos = Article.objects.filter(title__exact='articloURL') #exacto
+    articulos = Article.objects.filter(title__iexact='articloURL') #exacto peor no distingue entre mayusculas y minusculas
+    articulos = Article.objects.filter(id__gt=2) #solo que busca mayor que gt
+    articulos = Article.objects.filter(id__gte=2) #solo que busca mayor he igua es que gt
+
+    articulos = Article.objects.filter(id__lt=2) #solo que busca menores que lt
+    articulos = Article.objects.filter(id__lte=2) #solo que busca menores he iguales que gt
 
     return render(request, 'articulos.html', {
         'articulos': articulos
