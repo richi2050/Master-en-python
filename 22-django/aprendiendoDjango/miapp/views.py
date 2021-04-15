@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponse, redirect
+from miapp.models import Article
 
 layout ="""
     <h1>Sitio Web Django</h1>
@@ -53,3 +54,12 @@ def contacto(request,nombre='nombre'):
     return HttpResponse(layout+f"""
     <h2>Contacto {nombre}</h2>
     """)
+
+def crear_articulo(request):
+    articulo = Article(
+        title = 'Primer Articulo !!',
+        content = 'Contenido del articulo',
+        public = True
+    )
+    articulo.save()
+    return HttpResponse("Usuario creado")
