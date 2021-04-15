@@ -55,11 +55,11 @@ def contacto(request,nombre='nombre'):
     <h2>Contacto {nombre}</h2>
     """)
 
-def crear_articulo(request):
+def crear_articulo(request, title, content, public):
     articulo = Article(
-        title = 'Primer Articulo !!',
-        content = 'Contenido del articulo',
-        public = True
+        title = title,
+        content = content,
+        public = public
     )
     articulo.save()
-    return HttpResponse("Usuario creado")
+    return HttpResponse(f"Usuario creado: {articulo.title}")
