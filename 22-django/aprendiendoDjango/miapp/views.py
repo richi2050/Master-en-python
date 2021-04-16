@@ -65,6 +65,19 @@ def crear_articulo(request, title, content, public):
     articulo.save()
     return HttpResponse(f"Articulo creado: {articulo.title}")
 
+def save_article(request):
+    articulo = Article(
+        title = title,
+        content = content,
+        public = public
+    )
+    articulo.save()
+    return HttpResponse(f"Articulo creado: {articulo.title}")
+
+def create_article(request):
+    return render(request, 'create_article.html')
+
+
 def articulo(request):
     articulo = Article.objects.get(id=3)
     #articulo = Article.objects.get(pk=7)
